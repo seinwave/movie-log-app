@@ -1,0 +1,30 @@
+//
+//  ReviewView.swift
+//  Movie Log
+//
+//  Created by matt on 7/29/25.
+//
+
+import SwiftUI
+
+let dummyReview = [
+    "title": "A Simple Man",
+    "date": "10-23-2021",
+    "grade": "A+"
+]
+
+struct ReviewView: View {
+    var body: some View {
+        VStack {
+            Text(dummyReview["title"] ?? " ")
+            HStack{
+            Text(dummyReview["date"] ?? " ")
+            Text(dummyReview["grade"] ?? " ")
+                } 
+            }
+    }
+}
+
+#Preview {
+    ReviewView()
+}
