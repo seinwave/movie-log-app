@@ -10,18 +10,23 @@ import SwiftUI
 let dummyReview = [
     "title": "A Simple Man",
     "date": "10-23-2021",
-    "grade": "A+"
+    "grade": "A+",
 ]
 
 struct ReviewView: View {
     var body: some View {
         VStack {
             Text(dummyReview["title"] ?? " ")
-            HStack{
-            Text(dummyReview["date"] ?? " ")
-            Text(dummyReview["grade"] ?? " ")
-                } 
+                .padding()
+            HStack {
+                Text(dummyReview["date"] ?? " ")
+                    .padding()
+                Text(dummyReview["grade"] ?? " ")
+                    .padding()
             }
+        }
+        .border(.gray)
+        .cornerRadius(3)
     }
 }
 
