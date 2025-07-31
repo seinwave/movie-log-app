@@ -15,6 +15,7 @@ let dummyReview = [
 
 struct ReviewView: View {
     var body: some View {
+        // TODO: actually sketch out the component
         VStack {
             Text(dummyReview["title"] ?? " ")
                 .padding()
