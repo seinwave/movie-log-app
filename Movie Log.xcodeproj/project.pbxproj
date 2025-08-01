@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99F52D592E390F9000A42E45 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F52D582E390F9000A42E45 /* ReviewView.swift */; };
 		C913BB7A2E38EFE600D1051A /* Movie_LogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913BB792E38EFE600D1051A /* Movie_LogApp.swift */; };
 		C913BB7C2E38EFE600D1051A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913BB7B2E38EFE600D1051A /* ContentView.swift */; };
 		C913BB7E2E38EFE700D1051A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C913BB7D2E38EFE700D1051A /* Assets.xcassets */; };
@@ -15,6 +14,8 @@
 		C913BB8B2E38EFE800D1051A /* Movie_LogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913BB8A2E38EFE800D1051A /* Movie_LogTests.swift */; };
 		C913BB952E38EFE800D1051A /* Movie_LogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913BB942E38EFE800D1051A /* Movie_LogUITests.swift */; };
 		C913BB972E38EFE800D1051A /* Movie_LogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C913BB962E38EFE800D1051A /* Movie_LogUITestsLaunchTests.swift */; };
+		C97DDDC12E3CD6830061CEA7 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DDDC02E3CD6830061CEA7 /* MovieView.swift */; };
+		C97DDDC32E3CD9750061CEA7 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97DDDC22E3CD9750061CEA7 /* MovieListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		99F52D582E390F9000A42E45 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		C913BB762E38EFE600D1051A /* Movie Log.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie Log.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C913BB792E38EFE600D1051A /* Movie_LogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_LogApp.swift; sourceTree = "<group>"; };
 		C913BB7B2E38EFE600D1051A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		C913BB902E38EFE800D1051A /* Movie LogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Movie LogUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C913BB942E38EFE800D1051A /* Movie_LogUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_LogUITests.swift; sourceTree = "<group>"; };
 		C913BB962E38EFE800D1051A /* Movie_LogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_LogUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C97DDDC02E3CD6830061CEA7 /* MovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		C97DDDC22E3CD9750061CEA7 /* MovieListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +98,8 @@
 		C913BB782E38EFE600D1051A /* Movie Log */ = {
 			isa = PBXGroup;
 			children = (
-				99F52D582E390F9000A42E45 /* ReviewView.swift */,
+				C97DDDC22E3CD9750061CEA7 /* MovieListView.swift */,
+				C97DDDC02E3CD6830061CEA7 /* MovieView.swift */,
 				C913BB792E38EFE600D1051A /* Movie_LogApp.swift */,
 				C913BB7B2E38EFE600D1051A /* ContentView.swift */,
 				C913BB7D2E38EFE700D1051A /* Assets.xcassets */,
@@ -261,7 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C913BB7C2E38EFE600D1051A /* ContentView.swift in Sources */,
-				99F52D592E390F9000A42E45 /* ReviewView.swift in Sources */,
+				C97DDDC32E3CD9750061CEA7 /* MovieListView.swift in Sources */,
+				C97DDDC12E3CD6830061CEA7 /* MovieView.swift in Sources */,
 				C913BB7A2E38EFE600D1051A /* Movie_LogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

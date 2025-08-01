@@ -7,26 +7,25 @@
 
 import SwiftUI
 
-struct Movie {
+public struct Movie {
     let id: String
     let title: String
     let year: Double
     let director: String
     let posterUrl: String
+    let reviews: [Review]
 }
 
-struct Review {
+public struct Review {
     let id: String
     let authorName: String
     let letterGrade: String  // F- to A+
     let date: Date
 }
 
-struct MovieView: View {
+public struct MovieView: View {
     let movie: Movie
-    let reviews: [Review]
-
-    var body: some View {
+    public var body: some View {
 
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -58,11 +57,13 @@ struct MovieView: View {
 
                         HStack {
                             Text(movie.director)
+                            .font(.caption)
                             Text(String(Int(movie.year)))
+                            .font(.caption)
                         }
 
                         LazyVStack(alignment: .leading) {
-                            ForEach(reviews, id: \.id) { review in
+                            ForEach(movie.reviews, id: \.id) { review in
                                 ReviewCard(review: review)
                             }
                         }
@@ -88,18 +89,40 @@ struct ReviewCard: View {
         return formatter
     }()
 
+    private func gradeColor(for grade: String) -> Color {
+        switch grade {
+        case "A+", "A", "A-":
+            return .green
+        case "B+", "B", "B-":
+            return .blue
+        case "C+", "C", "C-":
+            return .orange
+        case "D+", "D", "D-":
+            return .red
+        case "F+", "F", "F-":
+            return .red
+        default:
+            return .gray
+        }
+    }
+
     var body: some View {
         HStack {
             Text(review.authorName)
                 .font(.subheadline)
                 .fontWeight(.medium)
 
+            Spacer()
+
             Text(review.letterGrade)
                 .font(.subheadline)
                 .fontWeight(.semibold)
+                .foregroundColor(gradeColor(for: review.letterGrade))
                 .padding(.horizontal, 8)
                 .padding(.vertical, 4)
                 .cornerRadius(4)
+
+            Spacer()
 
             Text(Self.formatter.string(from: review.date))
                 .font(.subheadline)
@@ -117,14 +140,14 @@ struct ReviewCard: View {
     MovieView(
         movie: Movie(
             id: "1",
-            title: "Fitzcaraldo",
-            year: 1971,
+            title: "Fitzcarraldo",
+            year: 1982, 
             director: "Werner Herzog",
-            posterUrl: ""
-
-        ),
-        reviews: [
-            Review(id: "1", authorName: "Matt", letterGrade: "B+", date: Date())
-        ]
+            posterUrl: "https://kagi.com/proxy/815BPyrUd7L._UF1000,1000_QL80_.jpg?c=CXPfL3-FqybbvZNQU82_BGSCqYZMz5YT_CgNKn5TDDVMoNATIPyBJIhsmjSZWvJHxnehq5q1L91KI7dklIZezWcMWDktcZVY6F39zOIwZCXOsBE8fuzkaz2POS4Bo0CW",
+            reviews: [
+                Review(id: "1", authorName: "Matt", letterGrade: "B+", date: Date()),
+                Review(id: "2", authorName: "Reba", letterGrade: "D", date: Date())
+            ]
+        )
     )
 }
